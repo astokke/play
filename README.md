@@ -30,6 +30,57 @@ The Yr API uses standard HTTP response codes to indicate whether or not the API 
 
 ## Object Model
 
+```curl
+    curl -X GET --header 'Accept: application/json' 'https://www.yr.no/api/v0/locations/1-72837'
+```
+
+```json
+{
+  "category": {
+    "id": "CB09",
+    "name": "By"
+  },
+  "id": "1-72837",
+  "name": "Oslo",
+  "position": {
+    "lat": 59.91273,
+    "lon": 10.74609
+  },
+  "elevation": 10,
+  "timeZone": "Europe/Oslo",
+  "urlPath": "Norge/Oslo/Oslo/Oslo",
+  "country": {
+    "id": "NO",
+    "name": "Norge"
+  },
+  "region": {
+    "id": "NO/03",
+    "name": "Oslo"
+  },
+  "subregion": {
+    "id": "NO/03/0301",
+    "name": "Oslo"
+  },
+  "_links": {
+    "self": {
+      "href": "/api/v0/locations/1-72837"
+    },
+    "celestialevents": {
+      "href": "/api/v0/locations/1-72837/celestialevents"
+    },
+    "forecast": {
+      "href": "/api/v0/locations/1-72837/forecast"
+    },
+    "notifications": {
+      "href": "/api/v0/locations/1-72837/notifications"
+    },
+    "now": {
+      "href": "/api/v0/locations/1-72837/forecast/now"
+    }
+  }
+}
+```
+
 [to do]
 
 ## Symbols
@@ -44,6 +95,6 @@ Follow yr-api @github [ ? ]
 
 Find our API clients for mobile development here:
 
-iOs: [iOs](https://github.com/YR/yr-swiftclient)
+iOs: [YR SwiftClient](https://github.com/YR/yr-swiftclient)
 
 Android: ??
