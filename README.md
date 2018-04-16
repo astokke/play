@@ -34,7 +34,7 @@ The Yr API uses standard HTTP response codes to indicate whether or not the API 
     curl -X GET --header 'Accept: application/json' 'https://www.yr.no/api/v0/locations/1-72837'
 ```
 
-```json
+```javascript
 {
   "category": {
     "id": "CB09",
