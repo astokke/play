@@ -30,9 +30,15 @@ The Yr API uses standard HTTP response codes to indicate whether or not the API 
 
 ## Object Model
 
+### Example Call
+
+#### Curl
+
 ```curl
     curl -X GET --header 'Accept: application/json' 'https://www.yr.no/api/v0/locations/1-72837'
 ```
+
+#### Response Body
 
 ```javascript
 {
