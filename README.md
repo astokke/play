@@ -28,17 +28,44 @@ If you do not have an API key yet, [click here](https://api.yr.no/) to register.
 
 The Yr API uses standard HTTP response codes to indicate whether or not the API request was a success.
 
+#### 400 Bad Request
+
+##### Curl
+
+```curl
+    curl -X GET --header 'Accept: application/json' 'https://www.yr.no/api/v0/notifications/filter?lat=%20.&lon=.&elevation=%20.'
+```
+
+##### Response Body
+
+```json
+{
+  "message": "The request is invalid.",
+  "modelState": {
+    "lat": ["The value ' .' is not valid for Double."],
+    "lon": ["The value '.' is not valid for Double."],
+    "elevation": ["The value ' .' is not valid for Int16."]
+  }
+}
+```
+
+##### Response Code
+
+```
+400
+```
+
 ## Object Model
 
-### Example Call
+#### Example Call
 
-#### Curl
+##### Curl
 
 ```curl
     curl -X GET --header 'Accept: application/json' 'https://www.yr.no/api/v0/locations/1-72837'
 ```
 
-#### Response Body
+##### Response Body
 
 ```javascript
 {
